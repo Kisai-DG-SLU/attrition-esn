@@ -166,6 +166,18 @@ pytest tests/
 - **Outils principaux** : Python 3.11+, FastAPI, Scikit-learn, uv, pytest
 - **Formats de sauvegarde** : modèles via joblib/json
 - **Documentation auto** : endpoints documentés via Swagger (FastAPI)
+- **Gestion des secrets et variables sensibles**
+Les clés d’API, mots de passe et tout secret technique sont stockés dans un fichier `.env` à la racine du projet.  
+Ce fichier n’est jamais versionné (présent dans `.gitignore`) pour garantir la sécurité.  
+Un exemple de variables à insérer :
+
+```
+API_KEY=xxxxxxx
+DB_PASSWORD=xxxxxxxxx
+```
+
+**Remarque :** Créez ce fichier manuellement après le clonage.  
+Ne partagez jamais vos secrets en public ni dans le repo.
 
 ***
 
