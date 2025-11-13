@@ -21,7 +21,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Lint (ruff)
-        run: pip install ruff && ruff .
+        run: pip install ruff && ruff check . --fix
 
       - name: Run tests (pytest)
         run: pip install pytest && pytest tests/
